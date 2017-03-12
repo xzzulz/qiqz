@@ -1,7 +1,7 @@
 ![basement.js](http://lignixz.github.io/qiq.js/img/qiq2.svg)
 
 # qiq.js
-v1.0
+v0.1
 
 ## Object based, reactive architecture in javascript.
 

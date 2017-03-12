@@ -3,7 +3,7 @@
 //
 // for tik events
 //
-// todo: add more tests
+//
 basement.set("testing qiq events")
 
 
@@ -76,3 +76,61 @@ var testAfter = basement.test("Provide numbers 1-10", "supply to the prepared se
 testAfter.check( 'first 3', out[0] == 3, 'first number that passes should be 3' )
 testAfter.check( 'second 9', out[1] == 9, 'second number that passes should be 9' )
 testAfter.check( 'only 2', out.length == 2, 'no more than these 2 numbers should pass' )
+
+
+
+// test 3
+// remove the last link, repeat the input
+qiqThird.unlink( qiqEnd )
+
+// reset output array
+out = []
+
+// tip the qiqs
+qiqAll.in( 1 )
+qiqAll.in( 2 )
+qiqAll.in( 3 )
+qiqAll.in( 4 )
+qiqAll.in( 5 )
+qiqAll.in( 6 )
+qiqAll.in( 7 )
+qiqAll.in( 8 )
+qiqAll.in( 9 )
+qiqAll.in( 10 )
+
+var testUnlink = basement.test("Unlink last qiq", "provide the same input. The output array should stay the same")
+testUnlink.check( 'empty', out.length == 0, 'output array should be empty' )
+
+
+
+// test 4
+// rearrange qiqs
+// conect them in a different arrangement
+qiqAll.unlink( qiqOdd )
+qiqOdd.unlink( qiqThird )
+
+qiqAll.link( qiqOdd )
+qiqAll.link( qiqThird )
+
+qiqOdd.link( qiqEnd )
+qiqThird.link( qiqEnd )
+
+// reset output array
+out = []
+
+// tip the qiqs
+qiqAll.in( 1 )
+qiqAll.in( 2 )
+qiqAll.in( 3 )
+qiqAll.in( 4 )
+qiqAll.in( 5 )
+qiqAll.in( 6 )
+
+
+var testRearrange = basement.test("Parallel arrangment", "Rearrange qiqs in parallel. Reset output array. Supply numbers 1 to 10")
+testRearrange.check( 'first 3', out[0] == 1, 'first number that passes should be 1' )
+testRearrange.check( 'second 9', out[1] == 3, 'second number that passes should be 3' )
+testRearrange.check( 'first 3', out[2] == 3, 'the 3 should pass again' )
+testRearrange.check( 'second 9', out[3] == 5, 'four number should be 5' )
+testRearrange.check( 'first 3', out[4] == 6, 'fith number should be 6' )
+testRearrange.check( 'only 2', out.length == 5, 'output array should have 5 numbers' )
