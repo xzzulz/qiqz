@@ -3,16 +3,17 @@
 # qiq.js
 v1.0
 
-Object based, reactive architecture in javascript.
+## Object based, reactive architecture in javascript.
 
 qiq objects represent events. They take input with the ```qiq.in( data )```
 method. If custom conditions are satisfied, the qiq object fires.
 
 When a qiq fires, it triggers connected qiq objects, optionally passing data
 to them. Each connected qiq object has its ```in``` method called, with the
-data. Dataflow is unidirectional. qiq outs are connected to qiq ins.
+data. Data flow is unidirectional. qiq outs are connected to qiq ins.
 
-The qiq arquitecture was designed for use in the xoL programming language.
+The qiq arquitecture was designed for use in the [xoL](http://lignixz.github.com/xoL/) programming language.
+It can be used for reactive, dataflow programming.
 
 ## Usage
 
