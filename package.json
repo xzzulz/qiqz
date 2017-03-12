@@ -1,0 +1,20 @@
+{
+  "name": "qiq.js",
+  "version": "0.1.0",
+  "description": "Object based, reactive architecture in javascript",
+  "main": "qiq.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lignixz/qiq.js.git"
+  },
+  "keywords": [
+    "reactive",
+    "dataflow"
+  ],
+  "author": "lignixz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lignixz/qiq.js/issues"
+  },
+  "homepage": "https://github.com/lignixz/qiq.js#readme"
+}

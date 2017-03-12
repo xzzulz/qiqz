@@ -4,7 +4,7 @@
 // Object based simple reactive architecture
 //
 //
-class qiq {
+export class qiq {
   constructor() {
     this._qiqs = new Set()
   }

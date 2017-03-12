@@ -53,5 +53,7 @@ qiq1.unlink( qiq2 )
 
 ## tests
 Basement tests: [qiq tests](http://lignixz.github.com/qiq.js/)
+This package uses basement test. To use them publish the entire folder in a web
+server, then open the index.html page.
 
 MIT license.
