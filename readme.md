@@ -51,6 +51,6 @@ qiq1.unlink( qiq2 )
 ```
 
 ## tests
-Basement tests: [tik tests](http://lignixz.github.com/qiq.js/)
+Basement tests: [qiq tests](http://lignixz.github.com/qiq.js/)
 
 MIT license.
