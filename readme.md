@@ -52,6 +52,9 @@ qiq1.unlink( qiq2 )
 ```
 
 ## tests
-Basement tests: [qiq tests](http://lignixz.github.com/qiq.js/)
+Basement tests: [qiq tests](http://lignixz.github.com/qiq.js/test/)
+To run tests, put whole project folder in a web server, then open
+`test/index.html` file. The tests will run in browser.
 
+## license
 MIT license.
