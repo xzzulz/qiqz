@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'version', 'patch' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack D  basement/basement.css
+5 verbose stack D  basement/basement.js
+5 verbose stack D  basement/basement.png
+5 verbose stack D  basement/basementIcon.png
+5 verbose stack D  basement/basementIcon.svg
+5 verbose stack D  img/qiq.svg
+5 verbose stack D  img/qiq2.svg
+5 verbose stack D  index.html
+5 verbose stack D  test.js
+5 verbose stack     at /usr/lib/node_modules/npm/lib/version.js:171:21
+5 verbose stack     at ChildProcess.exithandler (child_process.js:204:7)
+5 verbose stack     at emitTwo (events.js:87:13)
+5 verbose stack     at ChildProcess.emit (events.js:172:7)
+5 verbose stack     at maybeClose (internal/child_process.js:827:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:319:11)
+5 verbose stack     at emitOne (events.js:77:13)
+5 verbose stack     at Socket.emit (events.js:169:7)
+5 verbose stack     at Pipe._onclose (net.js:477:12)
+6 verbose cwd /home/nzonbi/source/qiq
+7 error Linux 3.19.0-79-generic
+8 error argv "/usr/bin/nodejs" "/usr/bin/npm" "version" "patch"
+9 error node v4.4.2
+10 error npm  v2.15.0
+11 error Git working directory not clean.
+11 error D  basement/basement.css
+11 error D  basement/basement.js
+11 error D  basement/basement.png
+11 error D  basement/basementIcon.png
+11 error D  basement/basementIcon.svg
+11 error D  img/qiq.svg
+11 error D  img/qiq2.svg
+11 error D  index.html
+11 error D  test.js
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
