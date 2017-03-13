@@ -1,6 +1,6 @@
 {
   "name": "qiq.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Object based, reactive architecture in javascript",
   "main": "qiq.js",
   "repository": {
