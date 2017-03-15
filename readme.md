@@ -1,4 +1,4 @@
-![basement.js](http://lignixz.github.io/qiq.js/img/qiq2.svg)
+![basement.js](http://lignixz.github.io/qiq.js/img/qiq2.png)
 
 # qiq.js
 v0.1
