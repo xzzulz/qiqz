@@ -13,31 +13,31 @@ var qiqAll = new qiq()
 
 var qiqOdd = new qiq()
 // customize to allow odd numbers
-qiqOdd.in = function( data ) {
+qiqOdd.on = function( data ) {
   if ( ( (data+1) % 2 ) == 0 ) {
-    this.fire( data )
+    return data
   }
 }
 
 var qiqThird = new qiq()
 // customize to allow numbers divisible by 3
-qiqThird.in = function( data ) {
+qiqThird.on = function( data ) {
   if ( data % 3 == 0 ) {
-    this.fire( data )
+    return data
   }
 }
 
 var out = []
 var qiqEnd = new qiq()
 // customize to put any in payload in output array
-qiqEnd.in = function( data ) {
+qiqEnd.on = function( data ) {
   out.push( data )
 }
 
 // create a not connected qiq
 var qiqNul = new qiq()
 // put input in array (to detect possible bugs)
-qiqNul.in = function( data ) {
+qiqNul.on = function( data ) {
   out.push( 0 )
 }
 
