@@ -4,17 +4,21 @@
 // Object based simple reactive architecture
 //
 //
-export class qiq {
+class qiq {
   constructor() {
     this._qiqs = new Set()
+    this.in = ( data ) => {
+      var ret = this.on( data )
+      if ( ret !== undefined ) this.out( data ) }
   }
 
-  in( data ) {
-    this.fire( data )
+  on( data ) {
+    return true
   }
 
-  fire( data ) {
-    this._qiqs.forEach( ( qiq ) => qiq.in( data ) )
+  out( data ) {
+    for ( let qiqx of this._qiqs )
+      qiqx.in( data )
   }
 
   link( oqiq ) {
