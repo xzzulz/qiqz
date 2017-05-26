@@ -4,75 +4,75 @@
 // for tik events
 //
 //
-basement.set("testing qiq events")
+basement.set("testing qiqz events")
 
 
 
-// create 3 qiq objects
-var qiqAll = new qiq()
+// create 3 qiqz objects
+var qiqzAll = new qiqz()
 
-var qiqOdd = new qiq()
+var qiqzOdd = new qiqz()
 // customize to allow odd numbers
-qiqOdd.on = function( data ) {
+qiqzOdd.on = function( data ) {
   if ( ( (data+1) % 2 ) == 0 ) {
     return data
   }
 }
 
-var qiqThird = new qiq()
+var qiqzThird = new qiqz()
 // customize to allow numbers divisible by 3
-qiqThird.on = function( data ) {
+qiqzThird.on = function( data ) {
   if ( data % 3 == 0 ) {
     return data
   }
 }
 
 var out = []
-var qiqEnd = new qiq()
+var qiqzEnd = new qiqz()
 // customize to put any in payload in output array
-qiqEnd.on = function( data ) {
+qiqzEnd.on = function( data ) {
   out.push( data )
 }
 
-// create a not connected qiq
-var qiqNul = new qiq()
+// create a not connected qiqz
+var qiqzNul = new qiqz()
 // put input in array (to detect possible bugs)
-qiqNul.on = function( data ) {
+qiqzNul.on = function( data ) {
   out.push( 0 )
 }
 
 // conect them in sequence
-qiqAll.link( qiqOdd )
-qiqOdd.link( qiqThird )
-qiqThird.link( qiqEnd )
+qiqzAll.link( qiqzOdd )
+qiqzOdd.link( qiqzThird )
+qiqzThird.link( qiqzEnd )
 
 // test 1
-var testBefore = basement.test("3 Qiqs set", "in sequence: Allow only odd numbers -> allow only divisibles by 3 -> put results in output array")
+var testBefore = basement.test("3 qiqzs set", "in sequence: Allow only odd numbers -> allow only divisibles by 3 -> put results in output array")
 testBefore.check( 'before input', out.length == 0, 'array should be empty' )
 
 
-// tip the qiqs
-qiqAll.in( 1 )
-qiqAll.in( 2 )
-qiqAll.in( 3 )
-qiqAll.in( 4 )
-qiqAll.in( 5 )
-qiqAll.in( 6 )
-qiqAll.in( 7 )
-qiqAll.in( 8 )
-qiqAll.in( 9 )
-qiqAll.in( 10 )
+// tip the qiqzs
+qiqzAll.in( 1 )
+qiqzAll.in( 2 )
+qiqzAll.in( 3 )
+qiqzAll.in( 4 )
+qiqzAll.in( 5 )
+qiqzAll.in( 6 )
+qiqzAll.in( 7 )
+qiqzAll.in( 8 )
+qiqzAll.in( 9 )
+qiqzAll.in( 10 )
 
 
 // test 2
 //
-// set a qiq that allows odd numbers, connected to one that allows only
+// set a qiqz that allows odd numbers, connected to one that allows only
 // divisibles by 3. Then one that puts results in output array. Supply as input
 // numbers from 1 to 10. Expected result in the array should be [ 3, 9 ]
 // events added but not tiked yet
 
 
-var testAfter = basement.test("Provide numbers 1-10", "supply to the prepared sequence of qiqs, as input, integer numbers 1 to 10")
+var testAfter = basement.test("Provide numbers 1-10", "supply to the prepared sequence of qiqzs, as input, integer numbers 1 to 10")
 testAfter.check( 'first 3', out[0] == 3, 'first number that passes should be 3' )
 testAfter.check( 'second 9', out[1] == 9, 'second number that passes should be 9' )
 testAfter.check( 'only 2', out.length == 2, 'no more than these 2 numbers should pass' )
@@ -81,53 +81,53 @@ testAfter.check( 'only 2', out.length == 2, 'no more than these 2 numbers should
 
 // test 3
 // remove the last link, repeat the input
-qiqThird.unlink( qiqEnd )
+qiqzThird.unlink( qiqzEnd )
 
 // reset output array
 out = []
 
-// tip the qiqs
-qiqAll.in( 1 )
-qiqAll.in( 2 )
-qiqAll.in( 3 )
-qiqAll.in( 4 )
-qiqAll.in( 5 )
-qiqAll.in( 6 )
-qiqAll.in( 7 )
-qiqAll.in( 8 )
-qiqAll.in( 9 )
-qiqAll.in( 10 )
+// tip the qiqzs
+qiqzAll.in( 1 )
+qiqzAll.in( 2 )
+qiqzAll.in( 3 )
+qiqzAll.in( 4 )
+qiqzAll.in( 5 )
+qiqzAll.in( 6 )
+qiqzAll.in( 7 )
+qiqzAll.in( 8 )
+qiqzAll.in( 9 )
+qiqzAll.in( 10 )
 
-var testUnlink = basement.test("Unlink last qiq", "provide the same input. The output array should stay the same")
+var testUnlink = basement.test("Unlink last qiqz", "provide the same input. The output array should stay the same")
 testUnlink.check( 'empty', out.length == 0, 'output array should be empty' )
 
 
 
 // test 4
-// rearrange qiqs
+// rearrange qiqzs
 // conect them in a different arrangement
-qiqAll.unlink( qiqOdd )
-qiqOdd.unlink( qiqThird )
+qiqzAll.unlink( qiqzOdd )
+qiqzOdd.unlink( qiqzThird )
 
-qiqAll.link( qiqOdd )
-qiqAll.link( qiqThird )
+qiqzAll.link( qiqzOdd )
+qiqzAll.link( qiqzThird )
 
-qiqOdd.link( qiqEnd )
-qiqThird.link( qiqEnd )
+qiqzOdd.link( qiqzEnd )
+qiqzThird.link( qiqzEnd )
 
 // reset output array
 out = []
 
-// tip the qiqs
-qiqAll.in( 1 )
-qiqAll.in( 2 )
-qiqAll.in( 3 )
-qiqAll.in( 4 )
-qiqAll.in( 5 )
-qiqAll.in( 6 )
+// tip the qiqzs
+qiqzAll.in( 1 )
+qiqzAll.in( 2 )
+qiqzAll.in( 3 )
+qiqzAll.in( 4 )
+qiqzAll.in( 5 )
+qiqzAll.in( 6 )
 
 
-var testRearrange = basement.test("Parallel arrangment", "Rearrange qiqs in parallel. Reset output array. Supply numbers 1 to 10")
+var testRearrange = basement.test("Parallel arrangment", "Rearrange qiqzs in parallel. Reset output array. Supply numbers 1 to 10")
 testRearrange.check( 'first 1', out[0] == 1, 'first number that passes should be 1' )
 testRearrange.check( 'second 3', out[1] == 3, 'second number that passes should be 3' )
 testRearrange.check( 'third 3', out[2] == 3, 'the 3 should pass again' )

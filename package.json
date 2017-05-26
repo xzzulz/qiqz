@@ -1,0 +1,28 @@
+{
+  "name": "qiqz",
+  "version": "0.3.0",
+  "description": "Simple reactive architecture in javascript",
+  "main": "qiqz.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Test in browser. See link on readme.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lignixz/qiqz.git"
+  },
+  "keywords": [
+    "reactive",
+    "dataflow",
+    "asynchronous",
+    "async"
+  ],
+  "author": "lignixz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lignixz/qiqz/issues"
+  },
+  "homepage": "https://github.com/lignixz/qiqz#readme"
+}
