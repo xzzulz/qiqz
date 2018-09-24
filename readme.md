@@ -1,4 +1,4 @@
-![qiqz](http://lignixz.github.io/qiqz/img/qiqz.svg)
+![qiqz](http://xzzulz.github.io/qiqz/img/qiqz.svg)
 
 # qiqz
 v0.3
@@ -25,7 +25,7 @@ to them. Each connected qiqz object has its ```in``` method called, with the
 data as parameter. Data flow is unidirectional. qiqz outs are linked
 to qiqz ins.
 
-The qiqz arquitecture was designed for use in the [xoL](http://lignixz.github.com/xoL/)
+The qiqz arquitecture was designed for use in the [xoL](http://xzzulz.github.com/xoL/)
 programming language. It can be used for reactive, dataflow programming,
 asynchronous programming, events, etc.
 
@@ -135,7 +135,7 @@ get_data = qiqzA.data
 ```
 
 ## tests
-Basement tests: [qiqz tests](http://lignixz.github.com/qiqz/test/)
+Basement tests: [qiqz tests](http://xzzulz.github.com/qiqz/test/)
 To run tests, put whole project folder in a web server, then open
 `test/index.html` file. The tests will run in browser.
 
